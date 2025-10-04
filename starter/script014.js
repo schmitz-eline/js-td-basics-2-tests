@@ -36,3 +36,34 @@
 // 2. Calculez leur BMI et affichez, selon le cas, "Le BMI de Mark est plus élevé que celui de John" ou "Le BMI de John est plus élevé que celui de Mark"
 
 // Écrire un programme qui teste si un nombre entré par l’utilisateur est pair ou impair.
+
+if (3 < 5) {
+    console.log('Je suis dans un bloc d’instructions soumis à une condition qui est toujours vraie, je vais donc toujours m’afficher');
+}
+if (3 > 5) {
+    console.log('Bon, je cause toujours, mais vu que je suis dans un bloc d’instructions soumis à une condition qui est toujours fausse, ce que je dis ne va jamais s’afficher');
+}
+
+const saisie = prompt('Entrez un nombre');
+const nombre = Number(saisie);
+if (isNaN(nombre)) {
+    console.log(saisie + ' n’est pas un nombre');
+} else {
+    if (nombre >= 0) {
+        console.log(nombre + ' est positif');
+    } else {
+        console.log(nombre + ' est négatif');
+    }
+}
+
+const answer = prompt('Bonjour !');
+if (answer && answer.toLowerCase() === 'bonjour') {
+    const name = prompt('Toi, tu es poli, tu me dis bonjour, je veux bien te parler… Comment t’appelles-tu ?');
+    if (name !== '') {
+        console.log('Je t’aime bien, ' + name);
+    } else {
+        console.log('Vous n’avez pas entré votre prénom');
+    }
+} else {
+    console.log('Je ne parle qu’aux gens polis qui disent bonjour');
+}

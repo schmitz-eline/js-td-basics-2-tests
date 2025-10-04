@@ -73,3 +73,118 @@
 // c) s'il pleut, affichez "Sortez en blouson."
 // d) s'il neige, affichez "Restez au chaud à la maison."
 // e) dans tous les autres cas (si la personne n'a
+
+// L’opérateur logique ET
+
+const a = true;
+const b = false;
+console.log(a + ' && ' + a + ' = ' + (a && a)); // true
+console.log(b + ' && ' + b + ' = ' + (b && b)); // false
+console.log(a + ' && ' + b + ' = ' + (a && b)); // false
+console.log(b + ' && ' + a + ' = ' + (b && a)); // false
+
+const saisieEt = prompt('Entrez un nombre (opérateur logique ET)');
+const nombreEt = Number(saisieEt);
+if (isNaN(nombreEt)) {
+    console.log(saisieEt + ' n’est pas un nombre valide');
+} else {
+    if (nombreEt >= 0 && nombreEt <= 100) {
+        console.log(nombreEt + ' est compris dans l’intervalle [0, 100]');
+    } else {
+        console.log(nombreEt + ' est en dehors de l’intervalle [0, 100]');
+    }
+}
+
+// L’opérateur logique OU
+
+const c = true;
+const d = false;
+console.log(c + ' || ' + c + ' = ' + (c || c)); // true
+console.log(d + ' || ' + d + ' = ' + (d || d)); // false
+console.log(c + ' || ' + d + ' = ' + (c || d)); // true
+console.log(d + ' || ' + c + ' = ' + (d || c)); // true
+
+const saisieOu = prompt('Entrez un nombre (opérateur logique OU)');
+const nombreOu = Number(saisieOu);
+if (isNaN(nombreOu)) {
+    console.log(saisieOu + ' n’est pas un nombre valide');
+} else {
+    if (nombreOu < 0 || nombreOu > 100) {
+        console.log(nombreOu + ' est en dehors de l’intervalle [0, 100]');
+    } else {
+        console.log(nombreOu + ' est compris dans l’intervalle [0, 100]');
+    }
+}
+
+// L’opérateur logique NOT
+
+console.log('!true = ' + !true); // false
+console.log('!false = ' + !false); // true
+
+const saisieNot = prompt('Entrez un nombre (opérateur logique NOT)');
+const nombreNot = Number(saisieNot);
+if (isNaN(nombreNot)) {
+    console.log(saisieNot + ' n’est pas un nombre valide');
+} else {
+    if (!(nombreNot > 100)) {
+        console.log(nombreNot + ' est inférieur ou égal à 100');
+    } else {
+        console.log(nombreNot + ' est supérieur à 100');
+    }
+}
+
+// LES ALTERNATIVES MULTIPLES
+
+const saisieMultiple = prompt('Entrez un nombre (alternatives MULIPLES)');
+const nombreMultiple = Number(saisieMultiple);
+if (isNaN(nombreMultiple)) {
+    console.log(saisieNot + ' n’est pas un nombre valide');
+} else {
+    /*
+    if (nombreMultiple > 0) {
+        console.log(nombreMultiple + ' est positif');
+    } else {
+        if (nombreMultiple < 0) {
+            console.log(nombreMultiple + ' est négatif');
+        } else {
+            console.log(nombreMultiple + ' est nul');
+        }
+    }
+    */
+    if (nombreMultiple > 0) {
+        console.log(nombreMultiple + ' est positif');
+    } else if (nombreMultiple < 0) {
+        console.log(nombreMultiple + ' est négatif');
+    } else {
+        console.log(nombreMultiple + ' est nul');
+    }
+}
+
+// APPLICATION N°1
+
+const firstName = 'Emile';
+const age = 17;
+if (age < 13) {
+    console.log(firstName + ' est un petit garçon');
+} else if (age >= 13 && age < 20) {
+    console.log(firstName + ' est un adolescent');
+} else if (age >= 20 && age < 30) {
+    console.log(firstName + ' est un jeune homme');
+} else {
+    console.log(firstName + ' est un homme');
+}
+
+// APPLICATION N°2
+
+const meteo = prompt('Quel temps fait-il dehors ? Répondez par un des quatre mots suivants : soleil, vent, pluie ou neige');
+if (meteo === 'soleil') {
+    console.log('Sortez en t-shirt');
+} else if (meteo === 'vent') {
+    console.log('Sortez en pull');
+} else if (meteo === 'pluie') {
+    console.log('Sortez en blouson');
+} else if (meteo === 'neige') {
+    console.log('Restez au chaud à la maison');
+} else {
+    console.log('Veuillez choisir un des 4 mots');
+}

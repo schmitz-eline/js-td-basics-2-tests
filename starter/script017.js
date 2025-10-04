@@ -19,3 +19,19 @@
 // 17 - 2. Les opérateurs d'égalité
 // 1. Écrivrez une instruction conditionnelle qui affiche bien à propos "J'ai testé si 23 était égal à '23' sans vérifier le type. L'opérateur que j'ai utilisé a opéré une conversion de type"
 // 2. Changez ensuite en utilisant l'opérateur d'égalité stricte pour vérifier que cette phrase ne s'affiche plus
+
+const height = 23;
+if (typeof height !== 'undefined' && !Number.isNaN(height) && height !== null) {
+    console.log('La variable height est définie. Sa valeur est : ' + height);
+} else {
+    console.log('La variable height n’est PAS définie. Sa valeur est : ' + height);
+}
+
+const a = 23;
+const b = '23';
+if (a == b) {
+    console.log('a == b fonctionne');
+} else if (a === b) {
+    console.log('a === b ne fonctionne pas'); // pas affiché
+}
+console.log('a === b ne fonctionne pas');

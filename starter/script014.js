@@ -44,15 +44,16 @@ if (3 > 5) {
     console.log('Bon, je cause toujours, mais vu que je suis dans un bloc d’instructions soumis à une condition qui est toujours fausse, ce que je dis ne va jamais s’afficher');
 }
 
-const saisie = prompt('Entrez un nombre');
-const nombre = Number(saisie);
-if (isNaN(nombre)) {
-    console.log(saisie + ' n’est pas un nombre');
+/*
+const saisie1 = prompt('Entrez un nombre');
+const nombre1 = Number(saisie1);
+if (isNaN(nombre1)) {
+    console.log(saisie1 + ' n’est pas un nombre valide');
 } else {
-    if (nombre >= 0) {
-        console.log(nombre + ' est positif');
+    if (nombre1 > 0) {
+        console.log(nombre1 + ' est positif');
     } else {
-        console.log(nombre + ' est négatif');
+        console.log(nombre1 + ' est négatif ou nul');
     }
 }
 
@@ -66,4 +67,48 @@ if (answer && answer.toLowerCase() === 'bonjour') {
     }
 } else {
     console.log('Je ne parle qu’aux gens polis qui disent bonjour');
+}
+*/
+
+const firstName = 'John';
+/*
+const civilStatus = 'single';
+if (civilStatus === 'married') {
+    console.log(firstName + ' est marié.');
+} else if (civilStatus === 'single') {
+    console.log('On espère que ' + firstName + ' va bientôt se marier.');
+}
+*/
+const isMarried = true;
+if (isMarried) {
+    console.log(firstName + ' est marié.');
+} else {
+    console.log('On espère que ' + firstName + ' va bientôt se marier.');
+}
+
+const weightJohn = 78;
+const heightJohn = 1.69;
+const weightMark = 92;
+const heightMark = 1.95;
+const bmiJohn = weightJohn / (heightJohn * heightJohn);
+const bmiMark = weightMark / (heightMark * heightMark);
+const isBmiJohnHigherThanBmiMark = bmiJohn > bmiMark;
+console.log('BMI de John : ' + bmiJohn);
+console.log('BMI de Mark : ' + bmiMark);
+if (isBmiJohnHigherThanBmiMark) {
+    console.log('Le BMI de John est plus élevé que celui de Mark');
+} else {
+    console.log('Le BMI de Mark est plus élevé que celui de John');
+}
+
+const saisie2 = prompt('Entrez un nombre');
+const nombre2 = parseInt(saisie2);
+if (isNaN(nombre2)) {
+    console.log(saisie2 + ' n’est pas un nombre valide');
+} else {
+    if (nombre2 % 2 === 0) {
+        console.log('Le nombre ' + nombre2 + ' est pair');
+    } else {
+        console.log('Le nombre ' + nombre2 + ' est impair');
+    }
 }

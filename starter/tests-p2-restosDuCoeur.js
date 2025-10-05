@@ -26,3 +26,21 @@ Tester avec des montants d'achat de
 //       Assurez-vous que le montant versé aux restos du cœur ne dépasse pas 2€ (utilisez Math.min(2, montant versé)).
 //    b) Si la condition est fausse, la somme versée aux restos du cœur est de 0€.
 // 4. Affichez la somme versée aux restos du cœur dans la console.
+
+let montantTotal = prompt('Entrez le montant total de vos achats.');
+const remise = 0.1 * montantTotal;
+const montantVerse = 0.1 * remise;
+
+if (montantTotal > 25) {
+    montantTotal = montantTotal - remise;
+    console.log('Vous obtenez une remise de 10%, soit de ' + Math.round(remise * 100) / 100 + ' €. La facture est de ' + Math.round(montantTotal * 100) / 100 + ' €.');
+    if (remise > 5) {
+        if (montantVerse >= 2) {
+            console.log('2 € sont reversés aux restos du cœur.');
+        } else {
+            console.log('10% de la remise est reversé aux restos du cœur, soit ' + (Math.round(montantVerse * 100) / 100) + ' €.');
+        }
+    }
+} else {
+    console.log('La facture est de ' + Math.round(montantTotal * 100) / 100 + ' €.');
+}

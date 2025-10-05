@@ -36,3 +36,23 @@ BONNE CHANCE 😀
 //    INDICE : vous allez avoir besoin de l'opérateur && pour prendre la décision.
 // 5. Changez là aussi les scores pour générer différents gagnants,
 //    en gardant toujours en tête qu'il pourrait y avoir des ex æquos.
+
+const averageJohn = Math.round((87 + 120 + 103) / 3 * 100) / 100; // 103.33
+const averageMike = Math.round((116 + 93 + 123) / 3 * 100) / 100; // 110.67
+const averageMary = Math.round((93 + 132 + 115) / 3 * 100) / 100; // 113.33
+
+if (averageJohn > averageMike && averageJohn > averageMary) {
+    console.log('L’équipe de John gagne avec un score moyen de ' + averageJohn + ' points.');
+} else if (averageMike > averageJohn && averageMike > averageMary) {
+    console.log('L’équipe de Mike gagne avec un score moyen de ' + averageMike + ' points.');
+} else if (averageMary > averageJohn && averageMary > averageMike) {
+    console.log('L’équipe de Mary gagne avec un score moyen de ' + averageMary + ' points.');
+} else if (averageJohn === averageMike && averageJohn > averageMary && averageMike > averageMary) {
+    console.log('Les équipes de John et de Mike sont ex æquos avec un score moyen de ' + averageJohn + ' points.');
+} else if (averageMike === averageMary && averageMike > averageJohn && averageMary > averageJohn) {
+    console.log('Les équipes de Mike et de Mary sont ex æquos avec un score moyen de ' + averageMike + ' points.');
+} else if (averageJohn === averageMary && averageJohn > averageMike && averageMary > averageMike) {
+    console.log('Les équipes de John et de Mary sont ex æquos avec un score moyen de ' + averageMary + ' points.');
+} else {
+    console.log('Les équipes de John, de Mike et de Mary sont toutes les 3 ex æquos avec un score moyen de ' + averageJohn + ' points.');
+}

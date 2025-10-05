@@ -21,3 +21,26 @@ AUTREMENT DIT :
 
 N'oubliez pas de tester votre programme avec différentes années pour vérifier qu'il fonctionne correctement.
 */
+
+const year = parseInt(prompt('Entrez une année.'));
+let isLeap;
+
+if (year % 4 === 0) {
+    if (year % 100 === 0) {
+        if (year % 400 === 0) {
+            isLeap = true;
+        } else {
+            isLeap = false;
+        }
+    } else {
+        isLeap = true;
+    }
+} else {
+    isLeap = false;
+}
+
+if (isLeap) {
+    console.log('L’année ' + year + ' est bissextile.');
+} else {
+    console.log('L’année ' + year + ' n’est pas bissextile.');
+}

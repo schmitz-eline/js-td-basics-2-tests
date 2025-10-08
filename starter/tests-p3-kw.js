@@ -27,17 +27,19 @@ Valeurs de test :
 // 5. Répétez les étapes 3 et 4 pour les tranches de 31 à 50 KW (20 centimes), de 51 à 70 KW (15 centimes), et les KW restants (10 centimes).
 // 6. Affichez le coût total (cost) en euros dans la console.
 
-const nombre = prompt('Entrez le nombre de KW consommés.');
-let coutTotal;
+const consommation = parseInt(prompt('Entrez le nombre de KW consommés.'));
+let cost = 0;
 
-if (nombre >= 1 && nombre <= 30) {
-    coutTotal = nombre * 0.25;
-} else if (nombre >= 31 && nombre <= 50) {
-    coutTotal = 30 * 0.25 + (nombre - 30) * 0.20;
-} else if (nombre >= 51 && nombre <= 70) {
-    coutTotal = 30 * 0.25 + 20 * 0.20 + (nombre - 50) * 0.15;
+if (consommation >= 1 && consommation <= 30) {
+    cost = consommation * 0.25;
+} else if (consommation >= 31 && consommation <= 50) {
+    cost = 30 * 0.25 + (consommation - 30) * 0.20;
+} else if (consommation >= 51 && consommation <= 70) {
+    cost = 30 * 0.25 + 20 * 0.20 + (consommation - 50) * 0.15;
 } else {
-    coutTotal = 30 * 0.25 + 20 * 0.20 + 20 * 0.15 + (nombre - 70) * 0.10;
+    cost = 30 * 0.25 + 20 * 0.20 + 20 * 0.15 + (consommation - 70) * 0.10;
 }
 
-console.log('Le coût total est de ' + Math.round(coutTotal * 100) / 100 + ' €.');
+console.log('Le coût total est de ' + Math.round(cost * 100) / 100 + ' €.');
+
+// TODO : Refaire avec l'opérateur % pour ne pas avoir de répétition de code
